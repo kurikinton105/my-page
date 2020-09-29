@@ -4,12 +4,15 @@
     <router-link to="/">home</router-link>
     <router-link to="/Top">Top</router-link>
     <router-link to="/Infomation">Infomation</router-link>
+    <router-link to="/Skills">Skills</router-link>
     <router-link to="/A">A</router-link>
     <router-link to="/B">B</router-link>
     <router-link to="/C">C</router-link>
   </div>
   <hr>
   <router-view></router-view>
+  <hr>
+  <router-link to="/Top">Top</router-link>
 </div>
 </template>
 

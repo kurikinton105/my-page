@@ -1,5 +1,6 @@
 import home from './components/home.vue'
 import Infomation from './components/Infomation.vue'
+import Skills from './components/Skills.vue'
 import A from './components/A.vue'
 import B from './components/B.vue'
 import C from './components/C.vue'
@@ -15,6 +16,10 @@ export const routes = [
   {
     path: '/Infomation',
     component: Infomation
+  },
+  {
+    path: '/Skills',
+    component: Skills
   },
   {
     path: '/a',
