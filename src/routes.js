@@ -3,6 +3,7 @@ import Infomation from './components/Infomation.vue'
 import A from './components/A.vue'
 import B from './components/B.vue'
 import C from './components/C.vue'
+import Top from './components/Top.vue'
 
 export const routes = [
   // path はルートパスからのアドレス
@@ -26,5 +27,9 @@ export const routes = [
   {
     path: '/c',
     component: C
+  },
+  {
+    path: '/Top',
+    component: Top
   },
 ]

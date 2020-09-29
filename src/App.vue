@@ -1,16 +1,12 @@
 <template>
 <div id="app">
-  <img src="./assets/logo.png">
-  <h1>{{ msg }}</h1>
-  <hr>
-  <div>Page transition to</div>
   <div>
-    <router-link to="/Infomation">A</router-link>
+    <router-link to="/">home</router-link>
+    <router-link to="/Infomation">Infomation</router-link>
+    <router-link to="/A">A</router-link>
     <router-link to="/B">B</router-link>
     <router-link to="/C">C</router-link>
-  </div>
-  <div>Back to
-    <router-link to="/">home</router-link>
+    <router-link to="/Top">Top</router-link>
   </div>
   <hr>
   <router-view></router-view>
@@ -22,7 +18,7 @@ export default {
   name: 'app',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App nijnij'
     }
   }
 }
@@ -35,7 +31,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 h1,
@@ -46,11 +42,6 @@ h2 {
 ul {
   list-style-type: none;
   padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {
