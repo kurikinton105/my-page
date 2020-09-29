@@ -1,4 +1,6 @@
 module.exports = {
+    publicPath: '/my-page',
     outputDir: 'doc',
-    publicPath: './'
-}
+    filenameHashing: false,
+    productionSourceMap: false,
+  }
