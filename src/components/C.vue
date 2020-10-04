@@ -10,10 +10,13 @@
     <li v-for="i in count">
        <v-btn @click="count+=1" id="test">押してね！！</v-btn> 
     </li>
-    <v-btn @click="!flag">押してね2！！</v-btn> 
-    <p class="test" v-bind:class="{active:flag}">doumo~~~</p> 
+    <v-btn @click="flag=!flag">押してね2！！</v-btn> 
+    
   </ul>
-  <p>count: {{ count }} </p>
+  <div class="test" v-bind:class="{active:flag}">
+      <p>doumo~~~</p> 
+    </div>
+  <p>count: {{ flag }} </p>
 </div>
 </template>
 
@@ -40,12 +43,11 @@
 
 <style>
   .test{
-    background:black;
     transition: 1.0s;
-    size: 30px;
+    transform: scale(0);
   }
    .active {
-      size:20px;
+      transform: scale(1);
     }
 </style>
 
