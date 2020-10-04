@@ -1,3 +1,4 @@
+
 <template>
 <div>
   <h1>Skills</h1>
@@ -5,6 +6,7 @@
   <a class="box1"> aaaretwwwwwwwwwwwwa<br>fdsjaofafsda </a>
   <br>
   <hr>
+  <vf>aaa</vf>
   <a href="#" class="btn-square-little-rich">BUTTON</a>
 </div>
 </template>
