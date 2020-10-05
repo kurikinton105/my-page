@@ -26,8 +26,15 @@
        </div>
    </section>
   </fade-in-component>
-  <v-btn @click="flag=!flag"><a href="#" class="btn-square-little-rich">上へスクロールします！！！やったぜ！</a></v-btn> 
-  <p>state: {{ flag }} </p>
+  <div v-if = "flag">
+    <p>この表示は、trueの時に表示されます</p>
+    <br>
+    <v-btn @click="flag=!flag"><a href="#" class="btn-square-little-rich">押してね２！！！</a></v-btn> 
+  </div>
+  <div v-else>
+    <v-btn @click="flag=!flag"><a href="#" class="btn-square-little-rich">上へスクロールします！！！やったぜ！</a></v-btn> 
+  </div>
+  <p>state: {{ flag }}</p>
   <br>
 一番下
 </div>
@@ -57,7 +64,10 @@
         }
       },
       scrollToTop() {
-        scrollTo(20, 0);
+        var element = document.getElementById('wrapper'); // 移動させたい位置の要素を取得
+        var rect = element.getBoundingClientRect();
+        var position = rect.top;    // 一番上からの位置を取得
+        scrollTo(20, position);
       }
     }
   }
