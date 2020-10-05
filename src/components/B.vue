@@ -26,14 +26,20 @@
        </div>
    </section>
   </fade-in-component>
+  <v-btn @click="flag=!flag"><a href="#" class="btn-square-little-rich">上へスクロールします！！！やったぜ！</a></v-btn> 
+  <p>state: {{ flag }} </p>
+  <br>
+一番下
 </div>
+
 </template>
 
 <script>
   export default {
     data() {
       return {
-        visible: false
+        visible: false,
+        flag : false
       };
     },
     created() {
@@ -42,16 +48,19 @@
     destroyed() {
       window.removeEventListener("scroll", this.handleScroll);
     },
+
     methods: {
       handleScroll() {
         if (!this.visible) {
           var top = this.$el.getBoundingClientRect().top;
           this.visible = top < window.innerHeight + 100;
         }
+      },
+      scrollToTop() {
+        scrollTo(20, 0);
       }
     }
   }
-  
 </script>
 
 <style>
@@ -88,6 +97,52 @@ h2
     opacity: 1;
     transform: translateY(0px);
   }
+}
+.btn {
+    display:  inline-block;
+    color: #fff;
+    text-decoration:  none;
+    background-color: #2196F3;
+    border-radius: 5px;
+    position:  relative;
+    height: 50px;
+    width: 50px;
+    cursor:pointer;
+}
+
+.btn::before {
+    content:  '';
+    width: 20px;
+    height: 20px;
+    display:  block;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    transform: rotate(-45deg);
+    position:  absolute;
+    top: 10px;
+    bottom:  0;
+    left:  0;
+    right:  0;
+    margin:  auto;
+}
+.btn-square-little-rich {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: black;
+  background: white;/*色*/
+  border: solid 1px #0f9ada;/*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.btn-square-little-rich:active {
+  /*押したとき*/
+  border: solid 1.5px #03A9F4;
+  box-shadow: none;
+  text-shadow: none;
 }
 </style>
 
